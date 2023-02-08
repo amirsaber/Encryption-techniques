@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="security.FXMLDocumentController">
+   <children>
+      <TextArea fx:id="MessageTextArea" layoutX="14.0" layoutY="31.0" prefHeight="303.0" prefWidth="333.0" promptText="Enter your message here" />
+      <TextArea fx:id="ResultTextArea" editable="false" layoutX="361.0" layoutY="31.0" prefHeight="303.0" prefWidth="333.0" promptText="Result" />
+      <Label layoutX="32.0" layoutY="6.0" text="Message" />
+      <Label layoutX="391.0" layoutY="6.0" text="Result" />
+      <MenuButton layoutX="32.0" layoutY="405.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="25.0" prefWidth="132.0" text="Security Options">
+         <items>
+            <Menu mnemonicParsing="false" text="Play Fair Cipher">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#PFEncryption" text="Encryption" />
+                  <MenuItem mnemonicParsing="false" onAction="#PFDecryption" text="Decryption" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Caser Cipher">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#CSEncrypt" text="Encryption" />
+                  <MenuItem mnemonicParsing="false" onAction="#CSDecrypt" text="Decryption" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text=" Vigenere Cipher">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#VCEncrypt" text="Encryption" />
+                  <MenuItem mnemonicParsing="false" onAction="#VCDecrypt" text="Decryption" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#OpenFestiel" text=" Feistel Cipher" />
+            <Menu mnemonicParsing="false" onAction="#OpenRC4" text=" RC4 Cipher" />
+            <Menu mnemonicParsing="false" onAction="#OpenRSA" text=" RSA Cipher" />
+            <Menu mnemonicParsing="false" onAction="#OpenDes" text=" DES Cipher" />
+         </items>
+      </MenuButton>
+      <TextField fx:id="key" layoutX="76.0" layoutY="356.0" prefHeight="32.0" prefWidth="555.0" />
+      <Label layoutX="112.0" layoutY="336.0" text="Key" />
+   </children>
+</Pane>
